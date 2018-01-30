@@ -13,6 +13,9 @@ target 'Git Repos Viewer' do
   target 'Git Repos ViewerTests' do
     inherit! :search_paths
     # Pods for testing
+		pod 'Expecta', :configuration => 'Debug'
+		pod 'OCMock', :configuration => 'Debug'
+		pod 'Specta', :configuration => 'Debug'
   end
 
 end

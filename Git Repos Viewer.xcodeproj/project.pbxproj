@@ -15,7 +15,7 @@
 		3A524B8B201E792B006E6FD6 /* RepositoriesPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A524B8A201E792B006E6FD6 /* RepositoriesPresenter.m */; };
 		3A524B95201FDB50006E6FD6 /* RepositoriesBitbucketApiRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A524B94201FDB50006E6FD6 /* RepositoriesBitbucketApiRequest.m */; };
 		3A524B98201FDB6E006E6FD6 /* BitbucketApiRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A524B97201FDB6E006E6FD6 /* BitbucketApiRepository.m */; };
-		3AB52D3F201DEB4900B6E369 /* Git_Repos_ViewerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AB52D3E201DEB4900B6E369 /* Git_Repos_ViewerTests.m */; };
+		3A524B9B201FF068006E6FD6 /* RepositoriesPresenterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A524B9A201FF068006E6FD6 /* RepositoriesPresenterTests.m */; };
 		69B91B795CA119832CDADFBD /* Pods_Git_Repos_ViewerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B53D43FD1645785A4A8D84CF /* Pods_Git_Repos_ViewerTests.framework */; };
 		B40AD59B150DE1D9A79BFC08 /* Pods_Git_Repos_Viewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC4C2924925E66DEFC54398E /* Pods_Git_Repos_Viewer.framework */; };
 		D118F0268CC41B3F03ED25FB /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = D118F364E37487131ADADB83 /* User.m */; };
@@ -60,9 +60,9 @@
 		3A524B94201FDB50006E6FD6 /* RepositoriesBitbucketApiRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RepositoriesBitbucketApiRequest.m; sourceTree = "<group>"; };
 		3A524B96201FDB6E006E6FD6 /* BitbucketApiRepository.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BitbucketApiRepository.h; sourceTree = "<group>"; };
 		3A524B97201FDB6E006E6FD6 /* BitbucketApiRepository.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BitbucketApiRepository.m; sourceTree = "<group>"; };
+		3A524B9A201FF068006E6FD6 /* RepositoriesPresenterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepositoriesPresenterTests.m; sourceTree = "<group>"; };
 		3AB52D22201DEB4800B6E369 /* Git Repos Viewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Git Repos Viewer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AB52D3A201DEB4900B6E369 /* Git Repos ViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Git Repos ViewerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3AB52D3E201DEB4900B6E369 /* Git_Repos_ViewerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Git_Repos_ViewerTests.m; sourceTree = "<group>"; };
 		3AB52D40201DEB4900B6E369 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		41B57722CFDDC037E51A8687 /* Pods-Git Repos ViewerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Git Repos ViewerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Git Repos ViewerTests/Pods-Git Repos ViewerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		54C202D4F9EDE8B6CA5BBF6A /* Pods-Git Repos Viewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Git Repos Viewer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Git Repos Viewer/Pods-Git Repos Viewer.release.xcconfig"; sourceTree = "<group>"; };
@@ -209,7 +209,7 @@
 		3AB52D3D201DEB4900B6E369 /* Git Repos ViewerTests */ = {
 			isa = PBXGroup;
 			children = (
-				3AB52D3E201DEB4900B6E369 /* Git_Repos_ViewerTests.m */,
+				3A524B9A201FF068006E6FD6 /* RepositoriesPresenterTests.m */,
 				3AB52D40201DEB4900B6E369 /* Info.plist */,
 			);
 			path = "Git Repos ViewerTests";
@@ -474,9 +474,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Git Repos ViewerTests/Pods-Git Repos ViewerTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Expecta/Expecta.framework",
+				"${BUILT_PRODUCTS_DIR}/OCMock/OCMock.framework",
+				"${BUILT_PRODUCTS_DIR}/Specta/Specta.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Expecta.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OCMock.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Specta.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -581,7 +588,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3AB52D3F201DEB4900B6E369 /* Git_Repos_ViewerTests.m in Sources */,
+				3A524B9B201FF068006E6FD6 /* RepositoriesPresenterTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
