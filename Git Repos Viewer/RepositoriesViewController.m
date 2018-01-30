@@ -35,6 +35,7 @@
 
 #pragma mark - UITextFieldDelegate
 
+
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
 	if ([textField isEqual:_usernameTextField]) {
 		[textField resignFirstResponder];

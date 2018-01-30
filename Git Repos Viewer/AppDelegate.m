@@ -12,7 +12,6 @@
 #import "GitHubApiGatewayImplementation.h"
 #import "ApiClient.h"
 #import "BitbucketApiGatewayImplementation.h"
-#import "RepositoriesPresenter.h"
 
 
 @implementation AppDelegate
